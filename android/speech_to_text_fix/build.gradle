@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+def PLUGIN = "speech_to_text";
+def ANDROIDX_WARNING = "androidx"
+def ANDROIDX_MISSING_ERROR = "speech_to_text plugin requires the Android X"
+def ANDROIDX_FOUND_ERROR = "speech_to_text plugin requires the old support library"
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.csdcorp.speech_to_text'
+    }
+    
+    compileSdkVersion 35
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+} 
