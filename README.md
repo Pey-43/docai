@@ -63,7 +63,7 @@ To get started with the Dr. AI mobile application, follow these steps:
 
     Step 1: Clone the Repository First, you'll need to clone the repository from GitHub. Open your terminal and run the following command:
 
-git clone https://github.com/MAHMOUDELSAYED7/DR-AI.git
+git clone https://github.com/Pey-43/docai.git
 
 Replace with the actual URL of your repository if it was changed.
 
